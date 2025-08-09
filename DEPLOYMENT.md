@@ -69,6 +69,7 @@ api/
 - **500 Error** : Vérifier DATABASE_URL dans les env vars
 - **Build Failed** : Vérifier que toutes les dépendances sont installées
 - **Images manquantes** : S'assurer que les assets sont dans le bon répertoire
+- **Runtime Error** : Utiliser nodejs18.x au lieu de @vercel/node dans vercel.json
 
 ### Logs
 - Function logs disponibles dans Vercel Dashboard
