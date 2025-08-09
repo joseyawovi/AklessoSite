@@ -96,7 +96,7 @@ export class MemStorage implements IStorage {
       id: "media-1",
       titre: "Rencontre avec Madame la Première Ministre - Vision énergétique du Togo",
       type: "video",
-      lien: "https://www.youtube.com/watch?v=example1",
+      lien: "https://www.youtube.com/watch?v=3QL68M3aMeA",
       miniature: "/attached_assets/photos de jonas-2-jonas et Madame la premiere Ministre_1754715375682.png",
       duree: "22:15",
       date_publication: new Date("2024-01-12")
@@ -106,7 +106,7 @@ export class MemStorage implements IStorage {
       id: "media-2",
       titre: "Conférence : L'avenir énergétique de l'Afrique de l'Ouest",
       type: "video",
-      lien: "https://youtube.com/example-conference",
+      lien: "https://www.youtube.com/watch?v=3QL68M3aMeA",
       miniature: "/attached_assets/photos de jonas-5-jonas_1754715375686.png",
       duree: "38:45",
       date_publication: new Date("2024-01-08")
@@ -116,7 +116,7 @@ export class MemStorage implements IStorage {
       id: "media-3",
       titre: "Podcast : Entrepreneuriat et développement en Afrique",
       type: "audio",
-      lien: "https://soundcloud.com/example",
+      lien: "https://www.youtube.com/watch?v=3QL68M3aMeA",
       miniature: "/attached_assets/photos de jonas-3-jonas a la conference_1754715375684.png",
       duree: "45:20",
       date_publication: new Date("2023-12-15")

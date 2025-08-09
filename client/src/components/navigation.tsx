@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import jonasPortraitImage from "@assets/photos de jonas-4-jonas_1754715375685.png";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,9 +18,18 @@ export default function Navigation() {
     <nav className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-primary">AJD</span>
+          {/* Logo avec portrait */}
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <img 
+              src={jonasPortraitImage} 
+              alt="Jonas Daou" 
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-primary"
+              data-testid="img-nav-portrait"
+            />
+            <div className="flex flex-col">
+              <span className="text-sm sm:text-base font-bold text-primary leading-tight">Aklesso Jonas</span>
+              <span className="text-sm sm:text-base font-bold text-primary leading-tight">Daou</span>
+            </div>
           </div>
           
           {/* Desktop Navigation */}
@@ -83,7 +94,7 @@ export default function Navigation() {
               className="text-charcoal dark:text-gray-300 hover:text-primary focus:outline-none focus:text-primary"
               data-testid="button-mobile-menu"
             >
-              <i className="fas fa-bars text-xl"></i>
+{isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
