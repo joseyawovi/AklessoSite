@@ -18,7 +18,7 @@ export default function BiographySection() {
           <img 
             src={jonasBusinessImage} 
             alt="Jonas Daou, entrepreneur et leader" 
-            className="w-full max-w-2xl mx-auto h-80 object-cover rounded-xl shadow-xl"
+            className="w-full max-w-2xl mx-auto h-96 object-cover object-center rounded-xl shadow-xl"
             data-testid="img-jonas-business"
           />
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Jonas Daou, Président du Groupe ZENER</p>

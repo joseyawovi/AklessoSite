@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
+import { Play } from "lucide-react";
 import type { Media } from "@shared/schema";
+import VideoPlayer from "./video-player";
 import jonasPmImage from "@assets/photos de jonas-2-jonas et Madame la premiere Ministre_1754715375682.png";
 import jonasBusinessImage from "@assets/photos de jonas-5-jonas_1754715375686.png";
 
 export default function MediaSection() {
+  const [selectedVideo, setSelectedVideo] = useState<Media | null>(null);
   const { data: media = [], isLoading } = useQuery<Media[]>({
     queryKey: ["/api/media"],
   });
@@ -46,9 +50,25 @@ export default function MediaSection() {
   }
 
   const playMedia = (mediaItem: Media) => {
-    if (mediaItem.lien) {
+    if (mediaItem.type === 'video' && mediaItem.lien) {
+      setSelectedVideo(mediaItem);
+    } else if (mediaItem.lien) {
       window.open(mediaItem.lien, '_blank');
     }
+  };
+
+  const getMediaThumbnail = (mediaItem: Media) => {
+    // Use real photos for our Jonas media items
+    if (mediaItem.id === 'media-1') {
+      return jonasPmImage;
+    }
+    if (mediaItem.id === 'media-2') {
+      return jonasBusinessImage;
+    }
+    if (mediaItem.id === 'media-3') {
+      return jonasPmImage; // Conference photo
+    }
+    return mediaItem.miniature || '';
   };
 
   return (
@@ -71,21 +91,19 @@ export default function MediaSection() {
               data-testid={`media-${mediaItem.id}`}
             >
               <div className="relative">
-                {mediaItem.miniature && (
-                  <img 
-                    src={mediaItem.miniature} 
-                    alt="" 
-                    className="w-full h-48 object-cover"
-                    data-testid={`img-media-${mediaItem.id}`}
-                  />
-                )}
+                <img 
+                  src={getMediaThumbnail(mediaItem)} 
+                  alt={mediaItem.titre} 
+                  className="w-full h-48 object-cover"
+                  data-testid={`img-media-${mediaItem.id}`}
+                />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                   <Button 
                     onClick={() => playMedia(mediaItem)}
                     className="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-colors"
                     data-testid={`button-play-media-${mediaItem.id}`}
                   >
-                    <i className="fas fa-play text-primary text-xl ml-1"></i>
+                    <Play className="h-6 w-6 text-primary ml-1" />
                   </Button>
                 </div>
                 <div className="absolute top-4 left-4 bg-secondary text-primary px-3 py-1 rounded-full text-xs font-semibold uppercase">
@@ -109,6 +127,14 @@ export default function MediaSection() {
           ))}
         </div>
       </div>
+      
+      {/* Video Player Modal */}
+      <VideoPlayer
+        videoUrl={selectedVideo?.lien || ''}
+        title={selectedVideo?.titre || ''}
+        isOpen={!!selectedVideo}
+        onClose={() => setSelectedVideo(null)}
+      />
     </section>
   );
 }

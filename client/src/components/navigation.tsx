@@ -17,18 +17,18 @@ export default function Navigation() {
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           {/* Logo avec portrait */}
           <div className="flex items-center space-x-3 sm:space-x-4">
             <img 
               src={jonasPortraitImage} 
               alt="Jonas Daou" 
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-primary"
+              className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-4 border-primary shadow-lg"
               data-testid="img-nav-portrait"
             />
             <div className="flex flex-col">
-              <span className="text-base sm:text-lg font-bold text-primary leading-tight">Aklesso Jonas</span>
-              <span className="text-base sm:text-lg font-bold text-primary leading-tight">Daou</span>
+              <span className="text-lg sm:text-xl font-bold text-primary leading-tight">Aklesso Jonas</span>
+              <span className="text-lg sm:text-xl font-bold text-primary leading-tight">Daou</span>
             </div>
           </div>
           
@@ -79,7 +79,7 @@ export default function Navigation() {
               </button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition-colors"
+                className="bg-primary hover:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 data-testid="nav-contact"
               >
                 Contact
