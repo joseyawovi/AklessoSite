@@ -1,0 +1,95 @@
+Projet : Crée un site web personnel moderne et réactif pour Aklesso Jonas Daou, entrepreneur togolais et président du groupe ZENER.
+
+Stack exigé :
+
+Frontend uniquement avec React + TypeScript
+
+Supabase comme base de données et gestion des formulaires
+
+Pas de backend custom (utiliser Supabase REST API ou client officiel)
+
+Site uniquement en français
+
+Pages à inclure :
+
+Accueil :
+
+Grande bannière avec photo professionnelle et citation inspirante
+
+Présentation courte de la personne
+
+Chiffres clés (ex : emplois créés, pays couverts, années d’expérience)
+
+Biographie :
+
+Parcours détaillé (formation, carrière, distinctions, engagements)
+
+Vision :
+
+Texte long sur sa vision pour l’Afrique, l’énergie et l’entrepreneuriat
+
+Articles :
+
+Liste d’articles connectée à Supabase (posts)
+
+Chaque article avec titre, date, contenu, image
+
+Médias :
+
+Liste de vidéos, interviews ou podcasts (liens YouTube ou audios) stockée dans Supabase (media)
+
+Projets :
+
+Présentation des projets réalisés ou en cours (table Supabase projects)
+
+Mentorat (optionnel) :
+
+Formulaire Supabase pour recevoir des candidatures de jeunes entrepreneurs (mentorship_requests)
+
+Contact :
+
+Formulaire (nom, email, message) stocké dans Supabase (messages)
+
+Fonctionnalités spécifiques :
+
+Design 100% responsive (mobile, tablette, ordinateur)
+
+Gestion d’articles, médias et projets via Supabase Studio
+
+Formulaires avec validation (React Hook Form)
+
+Intégration d’une newsletter (table subscribers)
+
+Affichage dynamique des données (articles, projets, médias)
+
+Design style :
+
+Professionnel, élégant, sobre
+
+Couleurs recommandées : blanc, gris foncé, doré ou bleu profond
+
+Typographie claire et lisible (sans-serif premium)
+
+Espacement généreux, sections bien structurées
+
+Structure de données Supabase (tables proposées) :
+
+posts: id, titre, slug, contenu, date_publication, image_url
+
+media: id, titre, type (video/audio/article), lien, miniature
+
+projects: id, nom, description, pays, statut, image_url
+
+messages: id, nom, email, message, date_envoi
+
+subscribers: id, email, date_inscription
+
+mentorship_requests: id, nom, email, motivation, date_demande
+
+Livrable attendu :
+
+Code source React + TypeScript avec structure de pages
+
+Connexion à Supabase via son SDK client
+
+Design responsive prêt pour déploiement (Vercel ou Netlify)
