@@ -51,7 +51,8 @@ api/
 - ✅ TypeScript OK : `npm run check`
 - ✅ Toutes les images optimisées et intégrées
 - ✅ Lecteur vidéo fonctionnel
-- ✅ Configuration Vercel valide
+- ✅ Configuration Vercel valide (sans conflits routes/headers)
+- ✅ CORS configuré dans le serveur
 - ✅ Variables d'environnement documentées
 
 ## Post-déploiement
