@@ -4,6 +4,8 @@
 
 This is a modern, responsive personal website for Aklesso Jonas Daou, a Togolese entrepreneur and president of the ZENER Group. The website serves as a professional portfolio showcasing his biography, vision, articles, media appearances, projects, and provides contact capabilities. Built as a full-stack application with a React frontend and Express backend, it features a comprehensive content management system for articles, media, projects, and user engagement through contact forms, newsletter subscriptions, and mentorship requests.
 
+**Status**: Production-ready and optimized for Vercel deployment with integrated video player, authentic photos, and responsive design.
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
