@@ -1,6 +1,6 @@
 // Vercel serverless function entry point
-const { default: handler } = require('../dist/index.js');
+import handler from '../dist/index.js';
 
-module.exports = (req, res) => {
+export default (req, res) => {
   return handler(req, res);
 };
