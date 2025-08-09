@@ -1,4 +1,4 @@
-import jonasConferenceImage from "@assets/photos de jonas-3-jonas a la conference_1754715375684.png";
+import jonasBusinessImage from "@assets/photos de jonas-5-jonas_1754715375686.png";
 
 export default function BiographySection() {
   return (
@@ -13,15 +13,15 @@ export default function BiographySection() {
           </p>
         </div>
         
-        {/* Jonas Conference Photo */}
+        {/* Jonas Business Photo */}
         <div className="mb-16 text-center">
           <img 
-            src={jonasConferenceImage} 
-            alt="Jonas Daou lors d'une conférence" 
-            className="w-full max-w-2xl mx-auto h-64 object-cover object-top rounded-xl shadow-xl"
-            data-testid="img-jonas-conference"
+            src={jonasBusinessImage} 
+            alt="Jonas Daou, entrepreneur et leader" 
+            className="w-full max-w-2xl mx-auto h-80 object-cover rounded-xl shadow-xl"
+            data-testid="img-jonas-business"
           />
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Jonas Daou lors d'une intervention publique</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Jonas Daou, Président du Groupe ZENER</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-16 items-start">

@@ -17,18 +17,18 @@ export default function Navigation() {
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo avec portrait */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="flex items-center space-x-3 sm:space-x-4">
             <img 
               src={jonasPortraitImage} 
               alt="Jonas Daou" 
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-primary"
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-primary"
               data-testid="img-nav-portrait"
             />
             <div className="flex flex-col">
-              <span className="text-sm sm:text-base font-bold text-primary leading-tight">Aklesso Jonas</span>
-              <span className="text-sm sm:text-base font-bold text-primary leading-tight">Daou</span>
+              <span className="text-base sm:text-lg font-bold text-primary leading-tight">Aklesso Jonas</span>
+              <span className="text-base sm:text-lg font-bold text-primary leading-tight">Daou</span>
             </div>
           </div>
           
