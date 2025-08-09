@@ -1,3 +1,5 @@
+import jonasPortraitImage from "@assets/photos de jonas-4-jonas_1754715375685.png";
+
 export default function VisionSection() {
   return (
     <section id="vision" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
@@ -9,6 +11,16 @@ export default function VisionSection() {
           <p className="text-xl text-gray-600 dark:text-gray-400" data-testid="text-vision-subtitle">
             Pour l'Afrique, l'énergie et l'entrepreneuriat
           </p>
+        </div>
+        
+        {/* Jonas Portrait */}
+        <div className="mb-12 text-center">
+          <img 
+            src={jonasPortraitImage} 
+            alt="Portrait de Jonas Daou" 
+            className="w-48 h-48 mx-auto rounded-full object-cover shadow-xl border-4 border-white dark:border-gray-700"
+            data-testid="img-jonas-portrait"
+          />
         </div>
         
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 lg:p-12">

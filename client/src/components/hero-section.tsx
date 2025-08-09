@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import jonasHeroImage from "@assets/photos de jonas-1-jonas pour section hero_1754715375681.png";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -50,7 +51,7 @@ export default function HeroSection() {
             {/* Professional photo placeholder */}
             <div className="relative inline-block">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                src={jonasHeroImage} 
                 alt="Aklesso Jonas Daou" 
                 className="w-80 h-80 object-cover rounded-2xl shadow-2xl"
                 data-testid="img-hero-photo"

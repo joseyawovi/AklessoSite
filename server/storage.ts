@@ -94,26 +94,37 @@ export class MemStorage implements IStorage {
     // Sample Media
     const media1: Media = {
       id: "media-1",
-      titre: "Interview : L'énergie solaire au Togo",
+      titre: "Rencontre avec Madame la Première Ministre - Vision énergétique du Togo",
       type: "video",
       lien: "https://www.youtube.com/watch?v=example1",
-      miniature: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      duree: "15:30",
+      miniature: "/attached_assets/photos de jonas-2-jonas et Madame la premiere Ministre_1754715375682.png",
+      duree: "22:15",
       date_publication: new Date("2024-01-12")
     };
 
     const media2: Media = {
       id: "media-2",
+      titre: "Conférence : L'avenir énergétique de l'Afrique de l'Ouest",
+      type: "video",
+      lien: "https://youtube.com/example-conference",
+      miniature: "/attached_assets/photos de jonas-5-jonas_1754715375686.png",
+      duree: "38:45",
+      date_publication: new Date("2024-01-08")
+    };
+
+    const media3: Media = {
+      id: "media-3",
       titre: "Podcast : Entrepreneuriat et développement en Afrique",
       type: "audio",
       lien: "https://soundcloud.com/example",
-      miniature: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      miniature: "/attached_assets/photos de jonas-3-jonas a la conference_1754715375684.png",
       duree: "45:20",
-      date_publication: new Date("2024-01-08")
+      date_publication: new Date("2023-12-15")
     };
 
     this.media.set(media1.id, media1);
     this.media.set(media2.id, media2);
+    this.media.set(media3.id, media3);
 
     // Sample Projects
     const project1: Project = {

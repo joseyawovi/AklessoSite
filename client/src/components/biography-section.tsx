@@ -1,3 +1,5 @@
+import jonasConferenceImage from "@assets/photos de jonas-3-jonas a la conference_1754715375684.png";
+
 export default function BiographySection() {
   return (
     <section id="biographie" className="py-20">
@@ -9,6 +11,17 @@ export default function BiographySection() {
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto" data-testid="text-biography-subtitle">
             Un parcours d'excellence au service du développement énergétique africain
           </p>
+        </div>
+        
+        {/* Jonas Conference Photo */}
+        <div className="mb-16 text-center">
+          <img 
+            src={jonasConferenceImage} 
+            alt="Jonas Daou lors d'une conférence" 
+            className="w-full max-w-2xl mx-auto h-64 object-cover object-top rounded-xl shadow-xl"
+            data-testid="img-jonas-conference"
+          />
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Jonas Daou lors d'une intervention publique</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-16 items-start">

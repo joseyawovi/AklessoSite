@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import type { Media } from "@shared/schema";
+import jonasPmImage from "@assets/photos de jonas-2-jonas et Madame la premiere Ministre_1754715375682.png";
+import jonasBusinessImage from "@assets/photos de jonas-5-jonas_1754715375686.png";
 
 export default function MediaSection() {
   const { data: media = [], isLoading } = useQuery<Media[]>({
