@@ -37,14 +37,14 @@ export default function KeyStatistics() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 border-t border-gray-100 dark:border-gray-800">
+    <section className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold gradient-text mb-4">
-            Impact en Chiffres
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Performance & Impact
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Mesurer l'excellence par les résultats
+            Des résultats mesurables qui témoignent de notre excellence
           </p>
         </div>
         
@@ -52,21 +52,20 @@ export default function KeyStatistics() {
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className="text-center group hover-lift animate-fade-in bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="text-center bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
               data-testid={`stat-${index}`}
             >
-              <div className="mb-6">
-                <div className={`w-16 h-16 mx-auto bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <i className={`${stat.icon} text-2xl text-white`}></i>
+              <div className="mb-4">
+                <div className={`w-12 h-12 mx-auto bg-primary rounded-lg flex items-center justify-center`}>
+                  <i className={`${stat.icon} text-xl text-white`}></i>
                 </div>
               </div>
               
-              <div className="text-4xl lg:text-5xl font-bold text-charcoal dark:text-white mb-3" data-testid={`stat-value-${index}`}>
+              <div className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-2" data-testid={`stat-value-${index}`}>
                 <AnimatedCounter end={stat.number} suffix={stat.suffix} />
               </div>
               
-              <div className="text-lg font-semibold text-charcoal dark:text-white" data-testid={`stat-label-${index}`}>
+              <div className="text-base font-medium text-gray-600 dark:text-gray-400" data-testid={`stat-label-${index}`}>
                 {stat.label}
               </div>
             </div>

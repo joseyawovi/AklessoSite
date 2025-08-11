@@ -29,14 +29,14 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-950">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl lg:text-5xl font-display font-bold gradient-text mb-4">
-            Témoignages
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Recommandations Professionnelles
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Ce que disent les leaders et partenaires sur le travail de Jonas Daou
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Témoignages de dirigeants et partenaires institutionnels
           </p>
         </div>
         
@@ -44,8 +44,7 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover-lift animate-scale-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700"
               data-testid={`testimonial-${testimonial.id}`}
             >
               <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-6">

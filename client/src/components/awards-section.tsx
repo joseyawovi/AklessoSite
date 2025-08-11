@@ -41,14 +41,14 @@ const awards = [
 
 export default function AwardsSection() {
   return (
-    <section className="py-24 bg-white dark:bg-gray-900">
+    <section className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl lg:text-5xl font-display font-bold gradient-text mb-4">
-            Distinctions & Reconnaissances
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Prix & Reconnaissances
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Une carrière marquée par l'excellence et la reconnaissance internationale
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Reconnaissance de l'excellence par les institutions internationales
           </p>
         </div>
         
@@ -58,15 +58,14 @@ export default function AwardsSection() {
             return (
               <div 
                 key={award.id}
-                className="text-center group hover-lift animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="text-center bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700"
                 data-testid={`award-${award.id}`}
               >
                 <div className="relative mb-6">
-                  <div className="w-20 h-20 mx-auto bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className={`h-10 w-10 ${award.color}`} />
+                  <div className="w-16 h-16 mx-auto bg-primary rounded-lg flex items-center justify-center">
+                    <IconComponent className="h-8 w-8 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-secondary rounded-full flex items-center justify-center">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
                     <span className="text-xs font-bold text-primary">{award.year}</span>
                   </div>
                 </div>

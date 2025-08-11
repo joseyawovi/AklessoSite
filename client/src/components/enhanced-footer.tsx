@@ -27,33 +27,33 @@ export default function EnhancedFooter() {
 
   return (
     <footer className="bg-gray-900 text-white">
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-primary to-blue-800 py-16">
+      {/* Professional CTA Section */}
+      <div className="bg-primary py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold mb-4">
-            Transformons Ensemble l'Avenir de l'Afrique
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">
+            Partenariat Stratégique pour l'Avenir Énergétique
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Rejoignez le mouvement pour un développement énergétique durable et inclusif
+            Explorons ensemble les opportunités de collaboration dans le secteur énergétique africain
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-secondary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-yellow-400 transition-all duration-300 hover:scale-105"
+              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               data-testid="footer-cta-contact"
             >
               <span className="flex items-center space-x-2">
-                <span>Démarrer une Collaboration</span>
+                <span>Initier une Collaboration</span>
                 <ArrowRight className="h-5 w-5" />
               </span>
             </Button>
             <Button 
               onClick={() => scrollToSection('newsletter')}
               variant="outline"
-              className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-primary transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300"
               data-testid="footer-cta-newsletter"
             >
-              Suivre l'Actualité
+              Newsletter Professionnelle
             </Button>
           </div>
         </div>
@@ -65,9 +65,10 @@ export default function EnhancedFooter() {
           <div className="grid lg:grid-cols-4 gap-12">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-display font-bold mb-4 gradient-text">
+              <h3 className="text-2xl font-bold mb-4 text-white">
                 Aklesso Jonas Daou
               </h3>
+              <p className="text-secondary font-semibold mb-4">Président du Groupe ZENER</p>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Entrepreneur visionnaire et leader dans le secteur énergétique africain. 
                 Président du Groupe ZENER, je m'engage pour un avenir énergétique durable et accessible à tous.

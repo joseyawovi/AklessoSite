@@ -18,20 +18,16 @@ export default function Navigation() {
     <nav className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-xl border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo avec portrait premium */}
-          <div className="flex items-center space-x-3 sm:space-x-4 group">
-            <div className="relative">
-              <img 
-                src={jonasPortraitImage} 
-                alt="Jonas Daou" 
-                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-3 border-primary shadow-lg group-hover:scale-105 transition-transform duration-300"
-                data-testid="img-nav-portrait"
-              />
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-display font-bold gradient-text leading-tight">Aklesso Jonas</span>
-              <span className="text-lg sm:text-xl font-display font-bold gradient-text leading-tight">Daou</span>
+          {/* Professional logo */}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-xl">JD</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-gray-900 dark:text-white leading-tight">Jonas Daou</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">Groupe ZENER</span>
+              </div>
             </div>
           </div>
           
@@ -56,13 +52,13 @@ export default function Navigation() {
               </button>
             ))}
             
-            {/* CTA Button */}
+            {/* Professional CTA Button */}
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="ml-4 bg-gradient-to-r from-primary to-blue-600 text-white px-6 py-2 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+              className="ml-4 bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md"
               data-testid="nav-cta-contact"
             >
-              Collaborer
+              Contact
             </Button>
           </div>
           
