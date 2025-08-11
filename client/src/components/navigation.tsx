@@ -15,76 +15,55 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50">
+    <nav className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-xl border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          {/* Logo avec portrait */}
-          <div className="flex items-center space-x-3 sm:space-x-4">
-            <img 
-              src={jonasPortraitImage} 
-              alt="Jonas Daou" 
-              className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-4 border-primary shadow-lg"
-              data-testid="img-nav-portrait"
-            />
+        <div className="flex justify-between items-center h-20">
+          {/* Logo avec portrait premium */}
+          <div className="flex items-center space-x-3 sm:space-x-4 group">
+            <div className="relative">
+              <img 
+                src={jonasPortraitImage} 
+                alt="Jonas Daou" 
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-3 border-primary shadow-lg group-hover:scale-105 transition-transform duration-300"
+                data-testid="img-nav-portrait"
+              />
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+            </div>
             <div className="flex flex-col">
-              <span className="text-lg sm:text-xl font-bold text-primary leading-tight">Aklesso Jonas</span>
-              <span className="text-lg sm:text-xl font-bold text-primary leading-tight">Daou</span>
+              <span className="text-lg sm:text-xl font-display font-bold gradient-text leading-tight">Aklesso Jonas</span>
+              <span className="text-lg sm:text-xl font-display font-bold gradient-text leading-tight">Daou</span>
             </div>
           </div>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          {/* Desktop Navigation Premium */}
+          <div className="hidden md:flex items-center space-x-1">
+            {[
+              { id: 'accueil', label: 'Accueil' },
+              { id: 'biographie', label: 'Biographie' },
+              { id: 'vision', label: 'Vision' },
+              { id: 'articles', label: 'Articles' },
+              { id: 'projets', label: 'Projets' },
+              { id: 'contact', label: 'Contact' }
+            ].map((item) => (
               <button 
-                onClick={() => scrollToSection('accueil')}
-                className="text-charcoal dark:text-gray-300 hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-                data-testid="nav-accueil"
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="relative text-charcoal dark:text-gray-300 hover:text-primary px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-primary/10 group"
+                data-testid={`nav-${item.id}`}
               >
-                Accueil
+                <span className="relative z-10">{item.label}</span>
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
-              <button 
-                onClick={() => scrollToSection('biographie')}
-                className="text-charcoal dark:text-gray-300 hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-                data-testid="nav-biographie"
-              >
-                Biographie
-              </button>
-              <button 
-                onClick={() => scrollToSection('vision')}
-                className="text-charcoal dark:text-gray-300 hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-                data-testid="nav-vision"
-              >
-                Vision
-              </button>
-              <button 
-                onClick={() => scrollToSection('articles')}
-                className="text-charcoal dark:text-gray-300 hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-                data-testid="nav-articles"
-              >
-                Articles
-              </button>
-              <button 
-                onClick={() => scrollToSection('medias')}
-                className="text-charcoal dark:text-gray-300 hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-                data-testid="nav-medias"
-              >
-                Médias
-              </button>
-              <button 
-                onClick={() => scrollToSection('projets')}
-                className="text-charcoal dark:text-gray-300 hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
-                data-testid="nav-projets"
-              >
-                Projets
-              </button>
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-primary hover:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                data-testid="nav-contact"
-              >
-                Contact
-              </Button>
-            </div>
+            ))}
+            
+            {/* CTA Button */}
+            <Button 
+              onClick={() => scrollToSection('contact')}
+              className="ml-4 bg-gradient-to-r from-primary to-blue-600 text-white px-6 py-2 rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg"
+              data-testid="nav-cta-contact"
+            >
+              Collaborer
+            </Button>
           </div>
           
           {/* Mobile menu button */}
