@@ -52,8 +52,7 @@ export default function HeroSection() {
               </Button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                variant="outline"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"
+                className="bg-white text-primary border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-transparent hover:text-white transition-colors"
                 data-testid="button-contact-me"
               >
                 Me contacter
@@ -67,7 +66,7 @@ export default function HeroSection() {
               <img 
                 src={jonasHeroImage} 
                 alt="Aklesso Jonas Daou" 
-                className="w-80 h-80 object-cover rounded-2xl shadow-2xl"
+                className="w-96 h-96 lg:w-[450px] lg:h-[450px] object-cover rounded-2xl shadow-2xl"
                 data-testid="img-hero-photo"
               />
               <div className="absolute -bottom-6 -right-6 bg-secondary w-24 h-24 rounded-full flex items-center justify-center shadow-xl">
