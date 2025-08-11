@@ -18,13 +18,27 @@ export default function HeroSection() {
               Aklesso Jonas Daou
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 font-light" data-testid="text-hero-subtitle">
-              Entrepreneur Togolais & Président du Groupe ZENER
+              CEO & Président-Directeur Général du Groupe ZENER
             </p>
+            
+            {/* Business Achievement Highlight */}
+            <div className="bg-white/10 p-6 rounded-xl border border-white/20">
+              <div className="grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-secondary">320 M€</div>
+                  <div className="text-sm text-blue-200">CA 2023</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-secondary">15,000+</div>
+                  <div className="text-sm text-blue-200">Emplois créés</div>
+                </div>
+              </div>
+            </div>
             
             {/* Quote Block */}
             <blockquote className="border-l-4 border-secondary pl-6 py-4 bg-white/10 rounded-r-lg">
               <p className="text-lg italic text-blue-50" data-testid="text-hero-quote">
-                "L'Afrique détient les clés de son avenir énergétique. Notre mission est de transformer cette vision en réalité durable."
+                "Bâtir des entreprises durables qui transforment l'économie africaine. Chaque investissement doit générer de la valeur économique, sociale et environnementale."
               </p>
             </blockquote>
             

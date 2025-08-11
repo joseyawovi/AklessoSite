@@ -26,45 +26,51 @@ export default function BiographySection() {
         
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
-            {/* Formation */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700" data-testid="card-education">
+            {/* Executive Profile */}
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700" data-testid="card-profile">
               <h3 className="text-2xl font-semibold text-primary mb-4">
-                <i className="fas fa-graduation-cap mr-3"></i>Formation
+                <i className="fas fa-user-tie mr-3"></i>Profil Exécutif
               </h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-secondary pl-4">
-                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-education-1">
-                    Master en Ingénierie Énergétique - École Polytechnique de Paris (2005)
+                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-profile-1">
+                    Master Ingénierie Énergétique - École Polytechnique Paris (2005)
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Spécialisation systèmes énergétiques complexes
                   </p>
                 </div>
                 <div className="border-l-4 border-secondary pl-4">
-                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-education-2">
-                    MBA Executive - INSEAD Business School (2010)
+                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-profile-2">
+                    MBA Executive Strategy - INSEAD Business School (2010)
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Finance internationale et développement durable
                   </p>
                 </div>
               </div>
             </div>
             
-            {/* Career */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700" data-testid="card-career">
+            {/* Leadership Experience */}
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700" data-testid="card-leadership">
               <h3 className="text-2xl font-semibold text-primary mb-4">
-                <i className="fas fa-briefcase mr-3"></i>Carrière
+                <i className="fas fa-chart-line mr-3"></i>Leadership & Résultats
               </h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-secondary pl-4">
-                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-career-1">
-                    2015 - Présent : Président du Groupe ZENER
+                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-leadership-1">
+                    2015 - Présent : Président-Directeur Général, Groupe ZENER
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Leadership stratégique et expansion régionale
+                    CA consolidé : 320 M€ | 12 filiales | 1,800 collaborateurs | 8 pays
                   </p>
                 </div>
                 <div className="border-l-4 border-secondary pl-4">
-                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-career-2">
-                    2010 - 2015 : Directeur Afrique de l'Ouest - TotalEnergies
+                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-leadership-2">
+                    2010 - 2015 : Directeur Régional Afrique de l'Ouest - TotalEnergies
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    Développement des projets énergétiques régionaux
+                    Gestion P&L 180 M€ | 450 M€ d'investissements | 5 pays
                   </p>
                 </div>
               </div>
@@ -72,39 +78,51 @@ export default function BiographySection() {
           </div>
           
           <div className="space-y-8">
-            {/* Distinctions */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700" data-testid="card-awards">
+            {/* Key Achievements */}
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700" data-testid="card-achievements">
               <h3 className="text-2xl font-semibold text-primary mb-4">
-                <i className="fas fa-medal mr-3"></i>Distinctions
+                <i className="fas fa-trophy mr-3"></i>Réalisations Clés
               </h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-secondary pl-4">
-                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-award-1">
-                    Prix de l'Entrepreneur de l'Année - CEDEAO (2022)
+                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-achievement-1">
+                    CEO de l'Année Afrique - African Business Awards (2023)
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Croissance 340% en 8 ans - Impact social exceptionnel
                   </p>
                 </div>
                 <div className="border-l-4 border-secondary pl-4">
-                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-award-2">
-                    Chevalier de l'Ordre National du Togo (2020)
+                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-achievement-2">
+                    850 M€ d'investissements levés - 15,000 emplois créés
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Plus grande série A africaine dans l'énergie (2022)
                   </p>
                 </div>
               </div>
             </div>
             
-            {/* Engagements */}
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700" data-testid="card-commitments">
+            {/* Board Positions */}
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700" data-testid="card-boards">
               <h3 className="text-2xl font-semibold text-primary mb-4">
-                <i className="fas fa-heart mr-3"></i>Engagements
+                <i className="fas fa-building mr-3"></i>Mandats & Gouvernance
               </h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-secondary pl-4">
-                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-commitment-1">
-                    Président de la Fondation Énergie pour l'Afrique
+                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-board-1">
+                    Administrateur - African Development Bank Energy Fund
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Supervision 2.5 Md€ d'investissements énergétiques
                   </p>
                 </div>
                 <div className="border-l-4 border-secondary pl-4">
-                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-commitment-2">
-                    Membre du Conseil des Entrepreneurs Africains
+                  <p className="font-medium text-charcoal dark:text-white" data-testid="text-board-2">
+                    Co-Président - Africa Energy Council
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Think tank regroupant 50 leaders du secteur
                   </p>
                 </div>
               </div>

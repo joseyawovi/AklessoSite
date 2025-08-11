@@ -1,8 +1,8 @@
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
-import KeyStatistics from "@/components/key-statistics";
+import KeyMetrics from "@/components/key-metrics";
 import BiographySection from "@/components/biography-section";
-import VisionSection from "@/components/vision-section";
+import BusinessVision from "@/components/business-vision";
 import ArticlesSection from "@/components/articles-section";
 import MediaSection from "@/components/media-section";
 import ProjectsSection from "@/components/projects-section";
@@ -17,9 +17,9 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <KeyStatistics />
+        <KeyMetrics />
         <BiographySection />
-        <VisionSection />
+        <BusinessVision />
         <ArticlesSection />
         <MediaSection />
         <ProjectsSection />
