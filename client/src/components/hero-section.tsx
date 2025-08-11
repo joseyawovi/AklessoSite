@@ -1,4 +1,3 @@
-import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import jonasHeroImage from "@assets/photos de jonas-1-jonas pour section hero_1754715375681.png";
 
@@ -11,62 +10,56 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="accueil" className="bg-white dark:bg-gray-900 py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="accueil" className="relative bg-gradient-to-br from-primary to-blue-900 text-white dark:from-blue-900 dark:to-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Simple professional content */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight" data-testid="text-hero-title">
-                Aklesso Jonas Daou
-              </h1>
-              
-              <p className="text-xl text-gray-600 dark:text-gray-300">
-                Président du Groupe ZENER
-              </p>
-            </div>
+          <div className="space-y-8">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight" data-testid="text-hero-title">
+              Aklesso Jonas Daou
+            </h1>
+            <p className="text-xl lg:text-2xl text-blue-100 font-light" data-testid="text-hero-subtitle">
+              Entrepreneur Togolais & Président du Groupe ZENER
+            </p>
             
-            <div className="space-y-2 text-gray-700 dark:text-gray-300">
-              <p>• Entrepreneur en Énergie Renouvelable</p>
-              <p>• Leader du Développement Durable en Afrique</p>
-              <p>• Expert en Solutions Énergétiques</p>
-            </div>
-            
-            <blockquote className="border-l-4 border-primary pl-4 py-2">
-              <p className="text-lg text-gray-700 dark:text-gray-300 italic" data-testid="text-hero-quote">
-                "L'Afrique détient les clés de son avenir énergétique."
+            {/* Quote Block */}
+            <blockquote className="border-l-4 border-secondary pl-6 py-4 bg-white/10 rounded-r-lg">
+              <p className="text-lg italic text-blue-50" data-testid="text-hero-quote">
+                "L'Afrique détient les clés de son avenir énergétique. Notre mission est de transformer cette vision en réalité durable."
               </p>
             </blockquote>
             
-            <div className="flex gap-4">
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-3"
-                data-testid="button-contact-me"
-              >
-                <Mail className="h-4 w-4 mr-2" />
-                Contact
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={() => scrollToSection('vision')}
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white px-6 py-3"
+                className="bg-secondary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors"
                 data-testid="button-discover-vision"
               >
-                En savoir plus
-                <ArrowRight className="h-4 w-4 ml-2" />
+                Découvrir ma vision
+              </Button>
+              <Button 
+                onClick={() => scrollToSection('contact')}
+                variant="outline"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors"
+                data-testid="button-contact-me"
+              >
+                Me contacter
               </Button>
             </div>
           </div>
           
-          {/* Simple professional portrait */}
-          <div className="flex justify-center lg:justify-end">
-            <img 
-              src={jonasHeroImage} 
-              alt="Aklesso Jonas Daou" 
-              className="w-72 h-72 lg:w-80 lg:h-80 object-cover rounded-lg shadow-lg"
-              data-testid="img-hero-photo"
-            />
+          <div className="lg:text-right">
+            {/* Professional photo placeholder */}
+            <div className="relative inline-block">
+              <img 
+                src={jonasHeroImage} 
+                alt="Aklesso Jonas Daou" 
+                className="w-80 h-80 object-cover rounded-2xl shadow-2xl"
+                data-testid="img-hero-photo"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-secondary w-24 h-24 rounded-full flex items-center justify-center shadow-xl">
+                <i className="fas fa-bolt text-primary text-2xl" data-testid="icon-hero-energy"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
